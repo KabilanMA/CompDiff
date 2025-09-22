@@ -14,7 +14,7 @@ rm -rf ${BASEDIR}
 # If you don't have public accessible URL for your target, you can just use `cp` to make a copy.
 mkdir -p ${BASEDIR}
 cd ${BASEDIR}
-wget https://dl.xpdfreader.com/xpdf-4.04.tar.gz
+wget https://dl.xpdfreader.com/old/xpdf-4.04.tar.gz
 tar -xzf xpdf-4.04.tar.gz
 mv xpdf-4.04 xpdf
 rm xpdf-4.04.tar.gz

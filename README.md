@@ -55,12 +55,12 @@ There might be many input files that are saved due to small timeouts or randomne
 We provide a python script to filter our these cases.
 For example, the following scirpt is to filter inputs found in `xpdf`
 ```
-$ python3 diff-post.py --bin ./examples/xpdf/bin/pdftotext --args "@@ -" -y 10 -r 1 -i examples/xpdf/findings/diffs -o ./out
+$ python3 diff-post.py --bin ./examples/xpdf/bin/pdftotext --args "@@ -" -y 10 -r 1 -i examples/xpdf/findings/default/diffs -o ./out
 ```
 
 and this scirpt for `libtiff`
 ```
-$ python3 diff-post.py --bin ./examples/libtiff/bin/tiffcp --args "-M -i @@ out.file" --out_file "out.file" -y 10 -r 1 -i examples/libtiff/findings/diffs -o ./out
+$ python3 diff-post.py --bin ./examples/libtiff/bin/tiffcp --args "-M -i @@ out.file" --out_file "out.file" -y 10 -r 1 -i examples/libtiff/findings/defaults/diffs -o ./out
 ```
 The inputs that indeed trigger bugs will be saved to `./out/diffs/` and their outputs are available in `./out/outputs/`. Timeout intputs will be saved to `./out/timeouts`.
 Please run `python3 diff-post.py -h` for help information.
